@@ -19,7 +19,7 @@ const cartSlice = createSlice({
           icon: "success",
           title: "Book saved successfully",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 1000,
         });
       }else{
         Swal.fire({
@@ -33,7 +33,14 @@ const cartSlice = createSlice({
       state.cartItems = state.cartItems.filter(item => item._id !== action.payload._id);
     },
     clearCart: (state) =>{
-      state.cartItems = []
+      state.cartItems = [];
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your cart has been cleared",
+        showConfirmButton: false,
+        timer: 1500
+      });
     }
   }
 });

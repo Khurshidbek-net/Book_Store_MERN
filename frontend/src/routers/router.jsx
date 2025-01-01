@@ -3,6 +3,8 @@ import App from "../App";
 import Home from "../pages/Home/Home";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Cart from "../pages/Books/Cart";
+import Checkout from "../pages/Books/Checkout";
 
 
 const router = createBrowserRouter([
@@ -28,7 +30,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/register",
-        element: <Register/>,
+        element: <Register />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
       },
     ],
   },
